@@ -27,7 +27,7 @@ router.post('/', async (req, res) => {
         },
         numberInStock: req.body.numberInStock,
         price: req.body.price,
-        image: req.body.image
+        image: Buffer.from(req.body.image, "base64")
     });
     await book.save();
 
@@ -52,7 +52,7 @@ router.put('/:id', async (req, res) => {
             },
             numberInStock: req.body.numberInStock,
             price: req.body.price,
-            image: req.body.image
+            image: Buffer.from(req.body.image, "base64")
         }, { new: true });
 
     if (!book)

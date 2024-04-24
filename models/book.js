@@ -37,7 +37,8 @@ function validateBook(book) {
         name: Joi.string().min(5).max(50).required(),
         genreId: Joi.objectId(),
         numberInStock: Joi.number().min(0).required(),
-        price: Joi.number().min(0).required()
+        price: Joi.number().min(0).required(),
+        image: Joi.string()
     });
 
     return schema.validate(book);

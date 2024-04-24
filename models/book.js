@@ -23,6 +23,10 @@ const bookSchema = new mongoose.Schema({
         type: Number,
         required: true,
         min: 0
+    },
+    image: {
+        data: Buffer,
+        contentType: String
     }
 });
 

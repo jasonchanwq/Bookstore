@@ -27,6 +27,7 @@ router.post('/', async (req, res) => {
         },
         numberInStock: req.body.numberInStock,
         price: req.body.price,
+        image: req.body.image
     });
     await book.save();
 
@@ -50,7 +51,8 @@ router.put('/:id', async (req, res) => {
                 name: genre.name
             },
             numberInStock: req.body.numberInStock,
-            price: req.body.price
+            price: req.body.price,
+            image: req.body.image
         }, { new: true });
 
     if (!book)

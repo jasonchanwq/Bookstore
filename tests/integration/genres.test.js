@@ -15,7 +15,7 @@ describe('/genres', () => {
     describe('GET /', () => {
         it('should return all genres', async () => {
             const genres = [
-                { name: 'genre1' },
+                { name: 'genre3' },
                 { name: 'genre2' },
             ];
 
